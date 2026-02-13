@@ -11,6 +11,7 @@ import { AppColors } from './theme';
 import {
   HomeScreen,
   ChatScreen,
+  ToolCallingScreen,
   SpeechToTextScreen,
   TextToSpeechScreen,
   VoicePipelineScreen,
@@ -83,6 +84,11 @@ const App: React.FC = () => {
               name="Chat"
               component={ChatScreen}
               options={{ title: 'Chat' }}
+            />
+            <Stack.Screen
+              name="ToolCalling"
+              component={ToolCallingScreen}
+              options={{ title: 'Tool Calling' }}
             />
             <Stack.Screen
               name="SpeechToText"

@@ -71,14 +71,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
                 onPress={() => navigation.navigate('Chat')}
               />
               <FeatureCard
+                title="Tools"
+                subtitle="Tool Calling"
+                icon="tools"
+                gradientColors={[AppColors.accentOrange, '#E67E22']}
+                onPress={() => navigation.navigate('ToolCalling')}
+              />
+            </View>
+            <View style={styles.row}>
+              <FeatureCard
                 title="Speech"
                 subtitle="Speech to Text"
                 icon="mic"
                 gradientColors={[AppColors.accentViolet, '#7C3AED']}
                 onPress={() => navigation.navigate('SpeechToText')}
               />
-            </View>
-            <View style={styles.row}>
               <FeatureCard
                 title="Voice"
                 subtitle="Text to Speech"
@@ -86,6 +93,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
                 gradientColors={[AppColors.accentPink, '#DB2777']}
                 onPress={() => navigation.navigate('TextToSpeech')}
               />
+            </View>
+            <View style={styles.row}>
               <FeatureCard
                 title="Pipeline"
                 subtitle="Voice Agent"
@@ -93,6 +102,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
                 gradientColors={[AppColors.accentGreen, '#059669']}
                 onPress={() => navigation.navigate('VoicePipeline')}
               />
+              <View style={{ flex: 1, margin: 8 }} />
             </View>
           </View>
 
