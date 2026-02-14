@@ -1,10 +1,14 @@
 /**
  * React Native configuration for RunAnywhere
+ *
+ * NOTE: automaticPodsInstallation is disabled because the @runanywhere packages
+ * use "podspecPath" in their react-native.config.js, which is not allowed by
+ * the RN 0.83 CLI. Pods must be installed manually: cd ios && pod install && cd ..
  */
 module.exports = {
   project: {
     ios: {
-      automaticPodsInstallation: true,
+      automaticPodsInstallation: false,
     },
   },
   dependencies: {
